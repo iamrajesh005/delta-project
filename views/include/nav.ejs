@@ -26,6 +26,9 @@
     width: 400px;         /* Explicitly set a larger width */
     max-width: 100%;      /* Ensures it stays responsive on small screens */
 }
+.searchbg{
+   background-color: #fff;
+}
 </style>
 
 
@@ -43,7 +46,7 @@
         <!-- //dark mode -->
         
       </div>
-      <div class="navbar-nav ms-auto">
+      <div class="navbar-nav ms-auto searchbg">
         <form action="/listings/search" class="d-flex" role="search" method="get">
           <input class="form-control me-2 form-inp " type="search" placeholder="Search Destinations Country" name="country"/>
           <button class="btn form-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
