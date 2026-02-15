@@ -19,11 +19,18 @@ const signupRouter= require("./router/signup.js");
 const flash= require("connect-flash");
 
 
+
 const session= require("express-session");
 const MongoStore = require('connect-mongo');
 const passport= require("passport");
 const LocalStrategy= require("passport-local");
 const User= require("./models/user.js");
+const figlet = require("figlet");
+
+figlet("Server Started", { font: "Babyface Lame" }, function (err, data) {
+  if (!err) console.log(data);
+});
+
 
 const dbUrl= process.env.ATLASDB_URL; 
 
