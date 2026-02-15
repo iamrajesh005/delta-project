@@ -1,0 +1,17 @@
+<% layout('layout/temp') -%>
+<style>
+    
+    .empty{
+      border-radius: 10px;
+      background-color: rgb(248, 247, 247);
+    }
+    .empty p{
+        font-size: 3rem;
+        opacity: 0.7;
+    }
+</style>
+<%- include('./include/option.ejs') %>
+<h3><%= id %></h3>
+<div class="empty">
+    <p><i class="fa-regular fa-face-sad-cry"></i> Seems like this type of destination does not exist till now</p>
+</div>

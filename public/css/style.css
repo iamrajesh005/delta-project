@@ -1,0 +1,143 @@
+.navbar-brand i{
+    font-size: 25px;
+}
+
+.navbar{
+    height: 80px;
+    background-color: white;
+}
+
+.navbar-nav .nav-link{
+    color: black !important;
+    background-color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    height: 90px;
+    justify-content: space-between;
+    
+}
+
+.social-media a{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.card img{
+    object-fit: cover;
+    border-radius: 10px;
+    height: 18rem !important;
+}
+
+.card{
+   border: none;
+    margin-bottom: 25px;
+}
+
+.anchor{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'playfair display', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container{
+    flex:1;
+}
+.cardindex:hover{
+    opacity: 0.75;
+}
+
+.btn{
+    background-color: #fe424d;
+    border: none;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns .del{
+   background-color: black;
+   color: #ffffff;
+}
+
+.error svg, .error div{
+    text-align: center !important;
+    font-size: 20px;
+}
+
+.revCard{
+    background-color: azure !important;
+    color: black !important;
+    
+}
+
+#map { height: 500px; width: 90vh;}
+
+.addNew{
+    border-radius: 20px;
+    margin-right: 20px;
+    background-color: rgb(244, 244, 244);
+    text-decoration: none;
+}
+
+.addNew:hover{
+     background-color: rgb(244, 244, 244);
+    text-decoration: none;
+}
+
+.profile{
+    font-size: 20px;
+}
+
+
+/* //filter */
+
+.filters{
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-between;
+    }
+    .filter{
+        text-align: center;
+        margin-left: 5px;
+        opacity: 0.6;
+        
+    }
+    .filter p{
+        font-size: 10px;
+        text-decoration: none;
+        color: black;
+    }
+    .filter i{
+        color: black;
+    }
+    .form-switch{
+        border: 1px solid black;
+       height: 3rem;
+       border-radius: 20px;
+       padding: 10px;
+        font-size: 15px;
+        
+    }
+    .filter:hover{
+       opacity: 1;
+       cursor: pointer;
+    }
+    .switch-para{
+        display: none;
+    }
+
+    

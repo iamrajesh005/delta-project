@@ -1,0 +1,77 @@
+<% layout('layout/temp') -%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h2>Create a new listing</h2>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        
+        
+        <div class="mb-1">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" placeholder="enter title" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        
+        <div class="mb-1">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" name="description" placeholder="enter description" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+               Enter a short description
+            </div>
+        </div>
+        
+       
+        <div class="mb-1">
+          <label for="image" class="form-label">Image link</label>
+          <input type="file" name="image" placeholder="Enter Image URL/link" class="form-control" required>
+          
+        </div>
+        
+        <div class="row">
+            
+        <div class="mb-1 col-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" name="price" placeholder="enter price" class="form-control" required>
+            <div class="invalid-feedback">
+              price should be valid
+            </div>
+        </div>
+        
+        <div class="mb-1 col-8">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="location" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">
+               Enter a valid location
+            </div>
+        </div>
+        </div>
+        <div class="mb-1">
+            <label for="category" class="form-label">Category</label>
+            <select name="category" id="category" class="form-control" required>
+                <option value="Mountain-City">Mountain-City</option>
+                <option value="Yurts">Yurts</option>
+                <option value="swimming-pool">swimming-pool</option>
+                <option value="iconic-City">iconic-City</option>
+                <option value="Hotels">Hotels</option>
+                <option value="Snow-Cave">Snow-Cave</option>
+                <option value="snow-City">snow-City</option>
+                <option value="camping">camping</option>
+                <option value="Adventure">Adventure</option>
+            </select>
+        </div>
+        <div class="mb-1">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="country" placeholder="enter country" class="form-control" required>
+            <div class="invalid-feedback">
+               country name should be valid
+        </div>
+        <br>
+        
+        <button class="btn btn-primary">submit</button>
+        
+    </form>
+    </div>
+        </div>
+</body>

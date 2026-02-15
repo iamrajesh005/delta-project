@@ -1,0 +1,42 @@
+<% layout('layout/temp') -%>
+<style>
+    
+</style>
+<body>
+    <%- include('./include/option.ejs') %>
+    <h3><i class="fa-brands fa-searchengin"></i>Search results: for "<%= country %>"</h3>
+    <br>
+   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for(list of getListing) { %>
+      <a href="/listings/<%= list._id %>" class="anchor">
+        <div class="col"> 
+            <div class="card cardindex"> <img src="<%= list.image.url %>" class="card-img-top" alt="listing-image">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b><%= list.title %></b> <br>
+                        &#8377; <%= list.price.toLocaleString('en-IN') %> /night &nbsp <i class="switch-para">+18% GST</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </a>
+    <% } %>
+</div>
+    
+    
+<script>
+    let switchtext= document.getElementById("switchCheckDefault");
+    switchtext.addEventListener("click", ()=>{
+        let texts= document.getElementsByClassName("switch-para");
+       for(text of texts){
+         if(text.style.display != "inline"){
+            text.style.display= "inline";
+         } else{
+            text.style.display= "none";
+         }
+       }
+    })
+</script>
+
+    
+</body>

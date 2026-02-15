@@ -1,0 +1,73 @@
+<style>
+  .form-btn{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    
+  }
+  .form-btn:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .form-inp{
+    border-radius: 20px;
+    padding: 0.5rem 40px 0.5rem 40px;
+  }
+  .fa-magnifying-glass{
+    display: inline;
+  }
+  .form-btn i{
+    font-size: 15px;
+  }
+  .form-inp {
+    border-radius: 20px;
+    padding: 0.5rem 20px; /* Reduced side padding slightly for better text space */
+    width: 400px;         /* Explicitly set a larger width */
+    max-width: 100%;      /* Ensures it stays responsive on small screens */
+}
+</style>
+
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass" style="color: #fe424d;"></i>WonderLust</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+       
+        
+        <a class="nav-link" href="/listings">all listings</a>
+        <!-- //dark mode -->
+        
+      </div>
+      <div class="navbar-nav ms-auto">
+        <form action="/listings/search" class="d-flex" role="search" method="get">
+          <input class="form-control me-2 form-inp " type="search" placeholder="Search Destinations Country" name="country"/>
+          <button class="btn form-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+      
+      <div class="navbar-nav ms-auto">
+        <a class="btn addNew" href="/listings/new">Add new listing</a>
+        <% if(!isLog){ %>
+            <a class="nav-link active" href="/signup"><b>signup</b></a>
+            <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+         <% if(isLog) { %>
+          <div class="navbar-nav">
+            <a href="/listings/user" class="nav-link profile">
+              <i class="fa-solid fa-circle-user"></i>
+            
+            </a>
+          </div>
+          
+            <a class="nav-link" href="/logout">LogOut</a>
+        <% } %>
+        
+      </div>
+    </div>
+  </div>
+</nav>
